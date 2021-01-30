@@ -1,8 +1,9 @@
 # ...vote()関数
 from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 
-from .models import Choice, Question
+from .models import Choice,Question
 # ...
 def vote(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
@@ -23,14 +24,14 @@ def vote(request, question_id):
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
 # ...vote()関数
 
-# ...投票の結果
+# ...投票の結果を表示するビュー (results) を定義します。
 from django.shortcuts import get_object_or_404, render
 
 
 def results(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     return render(request, 'polls/results.html', {'question': question})
-# ...投票の結果
+# ...投票の結果を表示するビュー (results) を定義します。
 
 # ...404ショートカット　①
 from django.shortcuts import get_object_or_404, render
