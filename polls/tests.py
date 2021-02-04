@@ -43,7 +43,7 @@ class QuestionIndexViewTests(TestCase):
         self.assertContains(response, "No polls are available.")
         self.assertQuerysetEqual(response.context['latest_question_list'], [])
         #追加
-        def test_future_question(self):
+    def test_future_question(self):
         """
         The detail view of a question with a pub_date in the future
         returns a 404 not found.
