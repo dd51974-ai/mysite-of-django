@@ -1,7 +1,9 @@
 # ...vote()関数
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
+#from django.template import loader
 from django.urls import reverse
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 from django.views import generic
 =======
@@ -97,6 +99,10 @@ class ResultsView(generic.DetailView):
     model = Question
     template_name = 'polls/results.html'
 <<<<<<< Updated upstream
+=======
+
+from .models import Choice,Question
+>>>>>>> parent of 8b39849... チュートリアル4の完了
 # ...
 =======
 't published yet.
@@ -166,6 +172,10 @@ def vote(request, question_id):
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
+# ...vote()関数
+
+
+
 
 # ...投票の結果を表示するビュー (results) を定義します。
 def results(request, question_id):
