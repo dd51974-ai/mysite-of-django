@@ -10,6 +10,10 @@ urlpatterns = [
     path('<int:question_id>/vote/', views.vote, name='vote'),
 
     # added the word 'specifics'
+<<<<<<< Updated upstream
     #path('specifics/<int:question_id>/', views.detail, name='detail'),
+=======
+    path('specifics/<int:question_id>/', views.detail, name='detail'),
+>>>>>>> Stashed changes
 
 ]
