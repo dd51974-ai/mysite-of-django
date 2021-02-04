@@ -14,14 +14,12 @@ urlpatterns = [
     path('<int:question_id>/vote/', views.vote, name='vote'),
 
     # added the word 'specifics'
-<<<<<<< HEAD
-<<<<<<< Updated upstream
+    path('specifics/<int:question_id>/', views.detail, name='detail'),
+#=======
+    path('specifics/<int:question_id>/', views.detail, name='detail'),
+#>>>>>>> parent of 8b39849... チュートリアル4の完了
+#=======
     #path('specifics/<int:question_id>/', views.detail, name='detail'),
-=======
-    path('specifics/<int:question_id>/', views.detail, name='detail'),
->>>>>>> Stashed changes
-=======
-    path('specifics/<int:question_id>/', views.detail, name='detail'),
->>>>>>> parent of 8b39849... チュートリアル4の完了
+#>>>>>>> parent of a68deb9... Auto stash before rebase of "4th-commit"
 
 ]

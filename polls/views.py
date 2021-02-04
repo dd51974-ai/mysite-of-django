@@ -4,12 +4,11 @@ from django.shortcuts import get_object_or_404, render
 #from django.template import loader
 from django.urls import reverse
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
-from django.views import generic
 =======
-from dfrom django.views import generic
-from django.utils import timezone
->>>>>>> Stashed changes
+>>>>>>> parent of a68deb9... Auto stash before rebase of "4th-commit"
+from django.views import generic
 
 from .models import Choice,Question
 
@@ -18,143 +17,27 @@ class IndexView(generic.ListView):
     context_object_name = 'latest_question_list'
 
     def get_queryset(self):
-<<<<<<< Updated upstream
         """Return the last five published questions."""
         return Question.objects.order_by('-pub_date')[:5]
-=======
-        """
-        Return the last five published questions (not including those set to be
-        published in the future).
-        """
-        return Question.objects.filter(
-            pub_date__lte=timezone.now()
-            ).order_by('-pub_date')[:5]
-
->>>>>>> Stashed changes
 
 
 class DetailView(generic.DetailView):
     model = Question
     template_name = 'polls/detail.html'
-<<<<<<< Updated upstream
-=======
-    ...
-    def get_queryset(self):
-        """
-        Excludes any questions that aren't published yet.
-        """
-        return Question.objects.filter(pub_date__lte=timezone.now())
 
 
 class ResultsView(generic.DetailView):
     model = Question
     template_name = 'polls/results.html'
-'t published yet.
-        """
-        return Question.objects.filter(pub_date__lte=timezone.now())
-
-
-class ResultsView(generic.DetailView):
-    model = Question
-    template_name = 'polls/results.html'
-'t published yet.
-        """
-        return Question.objects.filter(pub_date__lte=timezone.now())
-
-
-class ResultsView(generic.DetailView):
-    model = Question
-    template_name = 'polls/results.html'
-'t published yet.
-        """
-        return Question.objects.filter(pub_date__lte=timezone.now())
-
-
-class ResultsView(generic.DetailView):
-    model = Question
-    template_name = 'polls/results.html'
-'t published yet.
-        """
-        return Question.objects.filter(pub_date__lte=timezone.now())
-
-
-class ResultsView(generic.DetailView):
-    model = Question
-    template_name = 'polls/results.html'
-'t published yet.
-        """
-        return Question.objects.filter(pub_date__lte=timezone.now())
-
-
-class ResultsView(generic.DetailView):
-    model = Question
-    template_name = 'polls/results.html'
-'t published yet.
-        """
-        return Question.objects.filter(pub_date__lte=timezone.now())
->>>>>>> Stashed changes
-
-
-class ResultsView(generic.DetailView):
-    model = Question
-    template_name = 'polls/results.html'
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 
 from .models import Choice,Question
 >>>>>>> parent of 8b39849... チュートリアル4の完了
-# ...
 =======
-'t published yet.
-        """
-        return Question.objects.filter(pub_date__lte=timezone.now())
-
-
-class ResultsView(generic.DetailView):
-    model = Question
-    template_name = 'polls/results.html'
-'t published yet.
-        """
-        return Question.objects.filter(pub_date__lte=timezone.now())
-
-
-class ResultsView(generic.DetailView):
-    model = Question
-    template_name = 'polls/results.html'
-'t published yet.
-        """
-        return Question.objects.filter(pub_date__lte=timezone.now())
-
-
-class ResultsView(generic.DetailView):
-    model = Question
-    template_name = 'polls/results.html'
-'t published yet.
-        """
-        return Question.objects.filter(pub_date__lte=timezone.now())
-
-
-class ResultsView(generic.DetailView):
-    model = Question
-    template_name = 'polls/results.html'
-'t published yet.
-        """
-        return Question.objects.filter(pub_date__lte=timezone.now())
-
-
-class ResultsView(generic.DetailView):
-    model = Question
-    template_name = 'polls/results.html'
-'t published yet.
-        """
-        return Question.objects.filter(pub_date__lte=timezone.now())
-
-
-class ResultsView(generic.DetailView):
-    model = Question
-    template_name = 'polls/results.html'
-
->>>>>>> Stashed changes
+>>>>>>> parent of a68deb9... Auto stash before rebase of "4th-commit"
+# ...
 def vote(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     try:
