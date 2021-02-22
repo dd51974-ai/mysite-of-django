@@ -135,3 +135,15 @@ def detail(request, question_id):
 #def results(request, question_id):
     #response = "You're looking at the results of question %s."
     #return HttpResponse(response % question_id)
+
+from .models import InfoModelForm
+
+def info(request):
+    infodata = InfoModelForm.objects.all()
+    infodata2 = InfoModelForm.objects.values()
+    my_dict2 = {
+        'title':'テスト',
+        'val':infodata,
+        'val2':infodata2,
+    }
+    return render(request, 'webtestapp/info.html',my_dict2)    
