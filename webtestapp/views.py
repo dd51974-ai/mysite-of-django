@@ -10,4 +10,4 @@ def info(request):
         'val':infodata,
         'val2':infodata2,
     }
-    return render(request, 'webtestapp/info.html',my_dict2)
+    return render(request, 'polls/info.html',my_dict2)
