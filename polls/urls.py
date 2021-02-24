@@ -7,6 +7,10 @@ urlpatterns = [
     # ex: /polls/
     path('', views.index, name='index'),
     path('info', views.info, name='info'),
+#<<<<<<< Updated upstream
+#=======
+    path('update/<int:num>', views.update, name='update'),
+#>>>>>>> Stashed changes
     # ex: /polls/5/
     path('<int:question_id>/', views.detail, name='detail'),
     # ex: /polls/5/results/
