@@ -4,6 +4,18 @@ from django.shortcuts import get_object_or_404, render
 #from django.template import loader
 from django.urls import reverse
 from django.utils import timezone
+
+from .models import InfoModelForm
+
+def info(request):
+    infodata = InfoModelForm.objects.all()
+    header = ['ID','名前','メール','性別','部署','社歴','作成日']
+    my_dict2 = {
+        'title':'テスト',
+        'val':infodata,
+        'header':header
+    }
+    return render(request, 'polls/info.html',my_dict2)
 #<<<<<<< HEAD
 #<<<<<<< HEAD
 #<<<<<<< Updated upstream
@@ -135,15 +147,3 @@ def detail(request, question_id):
 #def results(request, question_id):
     #response = "You're looking at the results of question %s."
     #return HttpResponse(response % question_id)
-
-from .models import InfoModelForm
-
-def info(request):
-    infodata = InfoModelForm.objects.all()
-    infodata2 = InfoModelForm.objects.values()
-    my_dict2 = {
-        'title':'テスト',
-        'val':infodata,
-        'val2':infodata2,
-    }
-    return render(request, 'webtestapp/info.html',my_dict2)    
