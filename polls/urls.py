@@ -6,7 +6,7 @@ app_name = 'polls'
 urlpatterns = [
     # ex: /polls/
     path('', views.index, name='index'),
-    path('info', views.info, name='info'),
+    #path('info', views.info, name='info'),
 #<<<<<<< Updated upstream
 #=======
     #path('update/<int:num>', views.update, name='update'),
