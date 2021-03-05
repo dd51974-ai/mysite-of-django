@@ -5,17 +5,9 @@ from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 from django.utils import timezone
 
-from .models import InfoModelForm
 
-def info(request):
-    infodata = InfoModelForm.objects.all()
-    header = ['ID','名前','メール','性別','部署','社歴','作成日']
-    my_dict2 = {
-        'title':'テスト',
-        'val':infodata,
-        'header':header
-    }
-    return render(request, 'polls/info.html',my_dict2)
+
+
 #<<<<<<< HEAD
 #<<<<<<< HEAD
 #<<<<<<< Updated upstream

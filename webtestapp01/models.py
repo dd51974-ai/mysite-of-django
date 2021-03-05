@@ -1,11 +1,7 @@
 from django.db import models
 from django.utils import timezone
 
-
-
-    #def __str__(self):
-        #return '<id:' + str(self.id) + ',' + self.name + ',' + self.department + '>'
-
+# Create your models here.
 class InfoModelForm(models.Model):
     name = models.CharField('名前',max_length=255)
     mail = models.EmailField('メール',max_length=255)
