@@ -18,6 +18,8 @@ from django.urls import include, path
 
 urlpatterns = [
     path('polls/', include('polls.urls')),
+    path('cars/', include('cars.urls')),
+    path('cars2/', include('cars2.urls')),
     path('webtestapp/', include('webtestapp.urls')),
     path('admin/', admin.site.urls),
     # ex: /webtestapp/

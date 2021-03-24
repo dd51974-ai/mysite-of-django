@@ -31,6 +31,8 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'cars.apps.CarsConfig',
+    'cars2.apps.Cars2Config',
     'polls.apps.PollsConfig',
     'webtestapp01.apps.Webtestapp01Config',
     'webtestapp.apps.WebtestappConfig',
